@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F4EFE7;
+  --text: #171513;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 0%, rgba(215,185,138,.30), transparent 34%), radial-gradient(circle at 86% 12%, rgba(185,141,135,.24), transparent 30%), var(--bg);
+  color: var(--text);
+  font-family: Inter, Manrope, system-ui, sans-serif;
+}
+
+.container {
+  width: min(1160px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.display {
+  font-family: Impact, Arial Black, sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.script {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.card {
+  border: 1px solid rgba(23,21,19,.12);
+  background: rgba(244,239,231,.74);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 80px rgba(23,21,19,.10);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 900;
+  transition: .25s ease;
+}
+
+.btn-primary { background: #171513; color: #F4EFE7; }
+.btn-secondary { border: 1px solid rgba(23,21,19,.25); color: #171513; }
+.btn:hover { transform: translateY(-2px); }
+
+input, select, textarea {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(23,21,19,.12);
+  background: rgba(255,255,255,.50);
+  padding: 14px 16px;
+  outline: none;
+}
