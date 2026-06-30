@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct ResultPreviewView: View {
     let image: UIImage
@@ -6,9 +7,12 @@ struct ResultPreviewView: View {
     let gridOpacity: Double
     let onRetake: () -> Void
     var body: some View {
-        VStack {
-            Text("Preview")
+        VStack(spacing: 18) {
+            Image(uiImage: image).resizable().scaledToFit()
+            Text("Preview").font(.headline)
             Button("Retake", action: onRetake)
         }
+        .padding()
+        .background(Color.black)
     }
 }
